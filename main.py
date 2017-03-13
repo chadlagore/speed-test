@@ -13,15 +13,24 @@ def get_response():
         resp = json.load(infile)
     return resp
 
-def update_record():
+def update_record(resp):
     cur = conn.cursor()
-    query =  "INSERT INTO wifi_speed(date, download, upload, ping, latency, url, sponsor) VALUES (%s, %s, %s);"
-    data = (info, city, price)
+    query = "INSERT INTO wifi_speed(date, download, upload, ping, latency, url, sponsor) VALUES (%s, %s, %s, %s, %s, %s, %s);"
+    data = (
+        resp['timestamp'],
+        resp['download'],
+        resp['upload'],
+        resp['ping'],
+        resp['server']['latency'],
+        resp['server']['url'],
+        resp['server']['sponsor'],
+        )
     cursor.execute(query, data)
     conn.commit()
 
 def main():
-    get_response()
+    resp = get_response()
+    update_record(resp)
 
 if __name__ == '__main__':
     main()
