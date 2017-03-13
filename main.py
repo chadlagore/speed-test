@@ -4,13 +4,13 @@ import psycopg2
 from get_speed import execute_syscall
 
 conn = psycopg2.connect(
-    "dbname='speed_test' user='pi' host='localhost' password='emerald3'"
+    "dbname='speed_test' user='postgres' host='localhost' password='emerald3'"
     )
 
 def get_response():
-    resp = execute_syscall()
-    with open('cache.json', 'w') as outfile:
-        json.dumps(resp, indent=4)
+#    resp = execute_syscall()
+    with open('cache.json', 'r') as infile:
+        resp = json.load(infile)
     return resp
 
 def update_record():

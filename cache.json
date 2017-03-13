@@ -1,0 +1,19 @@
+{
+    "download": 10997094.223452851, 
+    "timestamp": "2017-03-13T06:12:44.979696", 
+    "ping": 21.459, 
+    "upload": 1619005.9877257335, 
+    "server": {
+        "latency": 21.459, 
+        "name": "Vancouver, BC", 
+        "url": "http://vancouver.speedtest.telus.com/speedtest/upload.jsp", 
+        "country": "Canada", 
+        "lon": "-123.1119", 
+        "cc": "CA", 
+        "host": "vancouver.speedtest.telus.com:8080", 
+        "sponsor": "TELUS", 
+        "lat": "49.2505", 
+        "id": "3049", 
+        "d": 4.337750632441299
+    }
+}
