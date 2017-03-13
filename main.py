@@ -23,9 +23,9 @@ def update_record(resp):
         resp['ping'],
         resp['server']['latency'],
         resp['server']['url'],
-        resp['server']['sponsor'],
+        resp['server']['sponsor']
         )
-    cursor.execute(query, data)
+    cur.execute(query, data)
     conn.commit()
 
 def main():
