@@ -8,9 +8,7 @@ conn = psycopg2.connect(
     )
 
 def get_response():
-#    resp = execute_syscall()
-    with open('cache.json', 'r') as infile:
-        resp = json.load(infile)
+    resp = execute_syscall()
     return resp
 
 def update_record(resp):
